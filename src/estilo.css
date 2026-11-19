@@ -1,0 +1,530 @@
+/* Estilo único do app: substitui Bootstrap (~230 KB) e o tema do Angular Material.
+   Cores inspiradas no Material 3 (paleta ciano/verde-azulado do app original). */
+
+:root {
+  --tamanho-texto: 18px; /* ajustado pelos botões A− / A+ */
+  --altura-barra: 56px;
+  --altura-rodape: 64px;
+  --raio: 16px;
+
+  --fonte-ui: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --fonte-texto: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, "Noto Serif", serif;
+
+  color-scheme: light;
+  --fundo: #f5fafa;
+  --superficie: #ffffff;
+  --superficie-2: #e9efee;
+  --texto: #171d1d;
+  --texto-suave: #4a5655;
+  --destaque: #006a6a;
+  --sobre-destaque: #ffffff;
+  --realce: #b8ebe9;
+  --sobre-realce: #002020;
+  --borda: #d4dedd;
+  --barra: #006a6a;
+  --sobre-barra: #ffffff;
+  --botao-barra: rgb(255 255 255 / 0.14);
+  --botao-barra-ativo: rgb(255 255 255 / 0.26);
+}
+
+:root[data-tema="escuro"] {
+  color-scheme: dark;
+  --fundo: #0e1415;
+  --superficie: #182122;
+  --superficie-2: #212b2c;
+  --texto: #dde4e3;
+  --texto-suave: #a9b6b5;
+  --destaque: #80d5d4;
+  --sobre-destaque: #003737;
+  --realce: #004f50;
+  --sobre-realce: #b8ebe9;
+  --borda: #2c3839;
+  --barra: #1b2627;
+  --sobre-barra: #cfe7e6;
+  --botao-barra: rgb(255 255 255 / 0.07);
+  --botao-barra-ativo: rgb(255 255 255 / 0.16);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--fundo);
+  color: var(--texto);
+  font: 16px/1.4 var(--fonte-ui);
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 0.38;
+}
+
+:focus-visible {
+  outline: 2px solid var(--destaque);
+  outline-offset: 2px;
+}
+
+.icone {
+  width: 24px;
+  height: 24px;
+  flex: none;
+  fill: currentColor;
+}
+
+.reticencias {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---------- barras ---------- */
+
+.barra {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  background: var(--barra);
+  color: var(--sobre-barra);
+  /* Em telas largas, mantém os botões alinhados à coluna de texto (~760 px). */
+  --recuo-largo: calc((100% - 760px) / 2);
+}
+
+.barra-superior {
+  top: 0;
+  gap: 4px;
+  height: calc(var(--altura-barra) + env(safe-area-inset-top));
+  padding: env(safe-area-inset-top) max(8px, env(safe-area-inset-right), var(--recuo-largo)) 0
+    max(8px, env(safe-area-inset-left), var(--recuo-largo));
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
+}
+
+.barra-inferior {
+  bottom: 0;
+  justify-content: space-between;
+  height: calc(var(--altura-rodape) + env(safe-area-inset-bottom));
+  padding: 0 max(12px, env(safe-area-inset-right), var(--recuo-largo)) env(safe-area-inset-bottom)
+    max(12px, env(safe-area-inset-left), var(--recuo-largo));
+  box-shadow: 0 -1px 3px rgb(0 0 0 / 0.15);
+}
+
+.barra-inferior .grupo {
+  display: flex;
+  gap: 8px;
+}
+
+.botao-barra {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  min-width: 0;
+  height: 40px;
+  padding: 0 8px 0 14px;
+  border-radius: 20px;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.botao-barra .icone {
+  width: 20px;
+  height: 20px;
+  opacity: 0.8;
+}
+
+.botao-livro {
+  flex: 1;
+  justify-content: center;
+}
+
+.botao-barra:hover,
+.botao-icone:hover:not(:disabled) {
+  background: var(--botao-barra);
+}
+
+.botao-barra:active,
+.botao-icone:active:not(:disabled) {
+  background: var(--botao-barra-ativo);
+}
+
+.barra :focus-visible {
+  outline-color: currentColor;
+}
+
+.botao-icone {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.barra-inferior .botao-icone {
+  background: var(--botao-barra);
+}
+
+.barra-inferior .botao-icone:hover:not(:disabled) {
+  background: var(--botao-barra-ativo);
+}
+
+/* ---------- texto ---------- */
+
+.leitura {
+  max-width: 42em;
+  margin: 0 auto;
+  padding: calc(var(--altura-barra) + env(safe-area-inset-top) + 20px)
+    max(18px, env(safe-area-inset-right))
+    calc(var(--altura-rodape) + env(safe-area-inset-bottom) + 28px)
+    max(18px, env(safe-area-inset-left));
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-texto);
+  line-height: 1.65;
+}
+
+.leitura article {
+  transition: opacity 0.15s;
+}
+
+.leitura .esmaecido {
+  opacity: 0.45;
+}
+
+.titulo-capitulo {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5em;
+  margin: 0 0 0.9em;
+  font-size: 1.35em;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.titulo-capitulo small {
+  font-family: var(--fonte-ui);
+  font-size: 0.5em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--destaque);
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  padding: 0.1em 0.45em;
+  cursor: help;
+}
+
+.versiculo {
+  margin: 0 0 0.45em;
+  text-wrap: pretty;
+}
+
+.numero {
+  font-family: var(--fonte-ui);
+  font-size: 0.62em;
+  font-weight: 700;
+  color: var(--destaque);
+  margin-right: 0.3em;
+  vertical-align: 0.5em;
+  line-height: 0;
+}
+
+.aviso {
+  padding-top: 20vh;
+  text-align: center;
+  font-family: var(--fonte-ui);
+  font-size: 16px;
+  color: var(--texto-suave);
+}
+
+.botao-texto {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: var(--destaque);
+  color: var(--sobre-destaque);
+  font-weight: 600;
+}
+
+/* ---------- janela de seleção ---------- */
+
+.janela {
+  flex-direction: column;
+  width: 100%;
+  max-width: 640px;
+  max-height: min(85dvh, 760px);
+  margin: auto auto 0;
+  padding: 0 0 env(safe-area-inset-bottom);
+  border: 0;
+  border-radius: 24px 24px 0 0;
+  background: var(--superficie);
+  color: var(--texto);
+  box-shadow: 0 -4px 24px rgb(0 0 0 / 0.25);
+}
+
+.janela[open] {
+  display: flex;
+  animation: subir 0.2s ease-out;
+}
+
+.janela::backdrop {
+  background: rgb(0 0 0 / 0.45);
+  animation: aparecer 0.2s ease-out;
+}
+
+@media (min-width: 700px) {
+  .janela {
+    margin: auto;
+    border-radius: 24px;
+  }
+}
+
+@keyframes subir {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .janela[open],
+  .janela::backdrop {
+    animation: none;
+  }
+}
+
+.janela-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 8px 6px 20px;
+  border-bottom: 1px solid var(--borda);
+}
+
+.janela-cabecalho h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.janela-corpo {
+  outline: none; /* recebe o foco inicial da janela (ver JanelaSeletor.vue) */
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 8px 12px 16px;
+}
+
+.subtitulo {
+  margin: 14px 8px 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--destaque);
+}
+
+.lista-versoes {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+}
+
+.lista-versoes button {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  text-align: left;
+}
+
+.lista-versoes strong {
+  min-width: 3em;
+  font-size: 17px;
+}
+
+.lista-versoes span {
+  color: var(--texto-suave);
+}
+
+.grade-livros,
+.grade-capitulos {
+  display: grid;
+  gap: 6px;
+}
+
+.grade-livros {
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+}
+
+.grade-capitulos {
+  grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
+  padding-top: 8px;
+}
+
+.grade-livros button,
+.grade-capitulos button {
+  min-height: 46px;
+  border-radius: 12px;
+  background: var(--superficie-2);
+}
+
+.grade-livros button {
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.grade-capitulos button {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.janela-corpo button:hover {
+  background: var(--borda);
+}
+
+.lista-versoes button:hover {
+  background: var(--superficie-2);
+}
+
+.janela-corpo button.atual {
+  background: var(--realce);
+  color: var(--sobre-realce);
+  font-weight: 700;
+}
+
+.lista-versoes button.atual span {
+  color: inherit;
+}
+
+/* ---------- busca ---------- */
+
+/* A janela de busca tem altura fixa: não "pula" enquanto os resultados mudam. */
+.janela.janela-alta {
+  height: min(85dvh, 760px);
+}
+
+.campo-busca {
+  position: sticky;
+  top: -8px; /* compensa o padding do corpo da janela */
+  z-index: 1;
+  margin: -8px -12px 0;
+  padding: 12px 12px 8px;
+  background: var(--superficie);
+}
+
+.campo-busca input {
+  width: 100%;
+  height: 48px;
+  padding: 0 18px;
+  border: 2px solid var(--borda);
+  border-radius: 24px;
+  background: var(--superficie-2);
+  color: var(--texto);
+  font: inherit;
+  font-size: 17px;
+  outline: none;
+}
+
+.campo-busca input:focus {
+  border-color: var(--destaque);
+}
+
+.estado-busca {
+  margin: 4px 8px 10px;
+  font-size: 14px;
+  color: var(--texto-suave);
+}
+
+.resultados {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.resultados button {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.resultados li + li {
+  border-top: 1px solid var(--borda);
+}
+
+.janela-corpo .resultados button:hover {
+  background: var(--superficie-2);
+}
+
+.referencia {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--destaque);
+}
+
+.trecho {
+  font-family: var(--fonte-texto);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+mark {
+  border-radius: 3px;
+  padding: 0 1px;
+  background: #ffe27a;
+  color: #1d1b00;
+}
+
+:root[data-tema="escuro"] mark {
+  background: #8a6d00;
+  color: #fff8de;
+}
+
+.botao-texto.mais {
+  display: block;
+  margin: 12px auto 4px;
+}
+
+/* Versículo aberto a partir da busca. */
+.versiculo {
+  scroll-margin: calc(var(--altura-barra) + 16px) 0 calc(var(--altura-rodape) + 16px);
+  border-radius: 6px;
+  transition: background-color 0.6s;
+}
+
+.versiculo.destacado {
+  background: var(--realce);
+  color: var(--sobre-realce);
+  box-shadow: 0 0 0 6px var(--realce);
+}

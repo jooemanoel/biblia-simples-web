@@ -1,0 +1,332 @@
+[
+ {
+  "nome": "Gênesis",
+  "abrev": "Gn",
+  "capitulos": 50
+ },
+ {
+  "nome": "Êxodo",
+  "abrev": "Êx",
+  "capitulos": 40
+ },
+ {
+  "nome": "Levítico",
+  "abrev": "Lv",
+  "capitulos": 27
+ },
+ {
+  "nome": "Números",
+  "abrev": "Nm",
+  "capitulos": 36
+ },
+ {
+  "nome": "Deuteronômio",
+  "abrev": "Dt",
+  "capitulos": 34
+ },
+ {
+  "nome": "Josué",
+  "abrev": "Js",
+  "capitulos": 24
+ },
+ {
+  "nome": "Juízes",
+  "abrev": "Jz",
+  "capitulos": 21
+ },
+ {
+  "nome": "Rute",
+  "abrev": "Rt",
+  "capitulos": 4
+ },
+ {
+  "nome": "1 Samuel",
+  "abrev": "1Sm",
+  "capitulos": 31
+ },
+ {
+  "nome": "2 Samuel",
+  "abrev": "2Sm",
+  "capitulos": 24
+ },
+ {
+  "nome": "1 Reis",
+  "abrev": "1Rs",
+  "capitulos": 22
+ },
+ {
+  "nome": "2 Reis",
+  "abrev": "2Rs",
+  "capitulos": 25
+ },
+ {
+  "nome": "1 Crônicas",
+  "abrev": "1Cr",
+  "capitulos": 29
+ },
+ {
+  "nome": "2 Crônicas",
+  "abrev": "2Cr",
+  "capitulos": 36
+ },
+ {
+  "nome": "Esdras",
+  "abrev": "Ed",
+  "capitulos": 10
+ },
+ {
+  "nome": "Neemias",
+  "abrev": "Ne",
+  "capitulos": 13
+ },
+ {
+  "nome": "Ester",
+  "abrev": "Et",
+  "capitulos": 10
+ },
+ {
+  "nome": "Jó",
+  "abrev": "Jó",
+  "capitulos": 42
+ },
+ {
+  "nome": "Salmos",
+  "abrev": "Sl",
+  "capitulos": 150
+ },
+ {
+  "nome": "Provérbios",
+  "abrev": "Pv",
+  "capitulos": 31
+ },
+ {
+  "nome": "Eclesiastes",
+  "abrev": "Ec",
+  "capitulos": 12
+ },
+ {
+  "nome": "Cânticos",
+  "abrev": "Ct",
+  "capitulos": 8
+ },
+ {
+  "nome": "Isaías",
+  "abrev": "Is",
+  "capitulos": 66
+ },
+ {
+  "nome": "Jeremias",
+  "abrev": "Jr",
+  "capitulos": 52
+ },
+ {
+  "nome": "Lamentações de Jeremias",
+  "abrev": "Lm",
+  "capitulos": 5
+ },
+ {
+  "nome": "Ezequiel",
+  "abrev": "Ez",
+  "capitulos": 48
+ },
+ {
+  "nome": "Daniel",
+  "abrev": "Dn",
+  "capitulos": 12
+ },
+ {
+  "nome": "Oséias",
+  "abrev": "Os",
+  "capitulos": 14
+ },
+ {
+  "nome": "Joel",
+  "abrev": "Jl",
+  "capitulos": 3
+ },
+ {
+  "nome": "Amós",
+  "abrev": "Am",
+  "capitulos": 9
+ },
+ {
+  "nome": "Obadias",
+  "abrev": "Ob",
+  "capitulos": 1
+ },
+ {
+  "nome": "Jonas",
+  "abrev": "Jn",
+  "capitulos": 4
+ },
+ {
+  "nome": "Miquéias",
+  "abrev": "Mq",
+  "capitulos": 7
+ },
+ {
+  "nome": "Naum",
+  "abrev": "Na",
+  "capitulos": 3
+ },
+ {
+  "nome": "Habacuque",
+  "abrev": "Hc",
+  "capitulos": 3
+ },
+ {
+  "nome": "Sofonias",
+  "abrev": "Sf",
+  "capitulos": 3
+ },
+ {
+  "nome": "Ageu",
+  "abrev": "Ag",
+  "capitulos": 2
+ },
+ {
+  "nome": "Zacarias",
+  "abrev": "Zc",
+  "capitulos": 14
+ },
+ {
+  "nome": "Malaquias",
+  "abrev": "Ml",
+  "capitulos": 4
+ },
+ {
+  "nome": "Mateus",
+  "abrev": "Mt",
+  "capitulos": 28
+ },
+ {
+  "nome": "Marcos",
+  "abrev": "Mc",
+  "capitulos": 16
+ },
+ {
+  "nome": "Lucas",
+  "abrev": "Lc",
+  "capitulos": 24
+ },
+ {
+  "nome": "João",
+  "abrev": "Jo",
+  "capitulos": 21
+ },
+ {
+  "nome": "Atos",
+  "abrev": "At",
+  "capitulos": 28
+ },
+ {
+  "nome": "Romanos",
+  "abrev": "Rm",
+  "capitulos": 16
+ },
+ {
+  "nome": "1 Coríntios",
+  "abrev": "1Co",
+  "capitulos": 16
+ },
+ {
+  "nome": "2 Coríntios",
+  "abrev": "2Co",
+  "capitulos": 13
+ },
+ {
+  "nome": "Gálatas",
+  "abrev": "Gl",
+  "capitulos": 6
+ },
+ {
+  "nome": "Efésios",
+  "abrev": "Ef",
+  "capitulos": 6
+ },
+ {
+  "nome": "Filipenses",
+  "abrev": "Fp",
+  "capitulos": 4
+ },
+ {
+  "nome": "Colossenses",
+  "abrev": "Cl",
+  "capitulos": 4
+ },
+ {
+  "nome": "1 Tessalonicenses",
+  "abrev": "1Ts",
+  "capitulos": 5
+ },
+ {
+  "nome": "2 Tessalonicenses",
+  "abrev": "2Ts",
+  "capitulos": 3
+ },
+ {
+  "nome": "1 Timóteo",
+  "abrev": "1Tn",
+  "capitulos": 6
+ },
+ {
+  "nome": "2 Timóteo",
+  "abrev": "2Tm",
+  "capitulos": 4
+ },
+ {
+  "nome": "Tito",
+  "abrev": "Tt",
+  "capitulos": 3
+ },
+ {
+  "nome": "Filemom",
+  "abrev": "Fm",
+  "capitulos": 1
+ },
+ {
+  "nome": "Hebreus",
+  "abrev": "Hb",
+  "capitulos": 13
+ },
+ {
+  "nome": "Tiago",
+  "abrev": "Tg",
+  "capitulos": 5
+ },
+ {
+  "nome": "1 Pedro",
+  "abrev": "1Pe",
+  "capitulos": 5
+ },
+ {
+  "nome": "2 Pedro",
+  "abrev": "2Pe",
+  "capitulos": 3
+ },
+ {
+  "nome": "1 João",
+  "abrev": "1Jo",
+  "capitulos": 5
+ },
+ {
+  "nome": "2 João",
+  "abrev": "2Jo",
+  "capitulos": 1
+ },
+ {
+  "nome": "3 João",
+  "abrev": "3Jo",
+  "capitulos": 1
+ },
+ {
+  "nome": "Judas",
+  "abrev": "Jd",
+  "capitulos": 1
+ },
+ {
+  "nome": "Apocalipse",
+  "abrev": "Ap",
+  "capitulos": 22
+ }
+]
