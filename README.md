@@ -54,3 +54,19 @@ Outras melhorias:
 - Tema (claro/escuro) e tamanho do texto ficam salvos; o tema inicial segue o sistema.
 - Setas ← → do teclado trocam de capítulo.
 - Corrigido NVT Salmos 119:13/130 (versículo 130 estava agrupado no 13).
+
+## Fonte dos textos
+
+Os textos bíblicos vêm do repositório [damarals/biblias](https://github.com/damarals/biblias), de Daniel Amaral, por meio do [biblia-simples](https://github.com/jooemanoel/biblia-simples) (versão em Angular), e foram divididos em um arquivo por livro.
+
+As traduções incluídas são protegidas por direitos autorais e pertencem às suas editoras:
+
+| Versão | Editora |
+|---|---|
+| Almeida Revista e Atualizada (ARA) | Sociedade Bíblica do Brasil (SBB) |
+| Nova Versão Internacional (NVI) | Biblica |
+| Nova Versão Transformadora (NVT) | Editora Mundo Cristão |
+
+Este é um projeto pessoal, sem fins lucrativos: não tem anúncios e não cobra nada. Os textos
+não são cedidos sob nenhuma licença deste repositório. Se você representa uma dessas editoras
+e deseja a remoção de algum texto, abra uma [issue](https://github.com/jooemanoel/biblia-simples-vue/issues) e ele será retirado.
