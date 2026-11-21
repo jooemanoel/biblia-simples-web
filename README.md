@@ -57,7 +57,7 @@ Outras melhorias:
 
 ## Fonte dos textos
 
-Os textos bíblicos vêm do repositório [damarals/biblias](https://github.com/damarals/biblias), de Daniel Amaral, por meio do [biblia-simples](https://github.com/jooemanoel/biblia-simples) (versão em Angular), e foram divididos em um arquivo por livro.
+Os textos bíblicos vêm do repositório [damarals/biblias](https://github.com/damarals/biblias), de Daniel Amaral.
 
 As traduções incluídas são protegidas por direitos autorais e pertencem às suas editoras:
 
