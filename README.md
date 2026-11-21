@@ -13,8 +13,10 @@ npm run dados     # divide os JSON originais em um arquivo por livro (public/bib
 npm run icones    # gera favicon e ícones do PWA (public/icones)
 ```
 
-`npm run dados` lê, por padrão, `../biblia-simples/src/assets/{ARA,NVI,NVT}.json`;
-outra pasta pode ser passada como argumento: `npm run dados -- caminho/da/pasta`.
+`npm run dados` baixa, por padrão, `inst/json/{ARA,NVI,NVT}.json` do repositório
+[damarals/biblias](https://github.com/damarals/biblias). Para usar arquivos locais (por
+exemplo, de um clone desse repositório), passe a pasta como argumento:
+`npm run dados -- caminho/da/pasta`.
 
 ## Estrutura
 

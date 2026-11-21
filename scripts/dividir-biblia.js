@@ -6,7 +6,9 @@
 // e o service worker guarda o restante da versão em segundo plano para uso offline.
 //
 // Uso: npm run dados [pasta-de-origem]
-//   pasta padrão: ../biblia-simples/src/assets (ARA.json, NVI.json, NVT.json)
+//   sem pasta: baixa ARA.json, NVI.json e NVT.json de inst/json no repositório
+//   damarals/biblias (https://github.com/damarals/biblias)
+//   com pasta: lê os mesmos arquivos dessa pasta (ex.: um clone do damarals/biblias)
 //
 // Gera:
 //   public/biblia/<VERSAO>/<01..66>.json  -> capítulos do livro (string[][])
@@ -14,13 +16,25 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-const ORIGEM = process.argv[2] ?? "../biblia-simples/src/assets";
+const PASTA_LOCAL = process.argv[2];
+const URL_ORIGEM = "https://raw.githubusercontent.com/damarals/biblias/main/inst/json";
 const VERSOES = ["ARA", "NVI", "NVT"];
+
+async function lerVersao(versao) {
+  if (PASTA_LOCAL) return readFileSync(join(PASTA_LOCAL, `${versao}.json`), "utf8");
+
+  const url = `${URL_ORIGEM}/${versao}.json`;
+  const resposta = await fetch(url);
+  if (!resposta.ok) throw new Error(`Falha ao baixar ${url} (HTTP ${resposta.status})`);
+  return resposta.text();
+}
+
+console.log(`origem: ${PASTA_LOCAL ?? URL_ORIGEM}`);
 
 let indice = null;
 
 for (const versao of VERSOES) {
-  const texto = readFileSync(join(ORIGEM, `${versao}.json`), "utf8").replace(/^﻿/, "");
+  const texto = (await lerVersao(versao)).replace(/^﻿/, "");
   const livros = JSON.parse(texto);
   const pasta = join("public", "biblia", versao);
   mkdirSync(pasta, { recursive: true });
