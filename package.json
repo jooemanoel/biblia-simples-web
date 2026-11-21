@@ -1,5 +1,5 @@
 {
-  "name": "biblia-simples-vue",
+  "name": "biblia-simples-web",
   "version": "2.0.0",
   "private": true,
   "description": "Bíblia em formatação simples (ARA, NVI, NVT), feita em Vue.js e instalável como PWA",

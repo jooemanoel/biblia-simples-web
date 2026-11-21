@@ -69,4 +69,4 @@ As traduções incluídas são protegidas por direitos autorais e pertencem às 
 
 Este é um projeto pessoal, sem fins lucrativos: não tem anúncios e não cobra nada. Os textos
 não são cedidos sob nenhuma licença deste repositório. Se você representa uma dessas editoras
-e deseja a remoção de algum texto, abra uma [issue](https://github.com/jooemanoel/biblia-simples-vue/issues) e ele será retirado.
+e deseja a remoção de algum texto, abra uma [issue](https://github.com/jooemanoel/biblia-simples-web/issues) e ele será retirado.
